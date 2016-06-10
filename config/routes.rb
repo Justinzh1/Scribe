@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  get 'templates/default'
-  root 'templates#home'
+  resources :articles
+  resources :bins
+  root 'articles#new'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

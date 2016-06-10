@@ -14,3 +14,24 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//
+$(function() {
+  var txt = $('#comment'),
+    hiddenDiv = $(document.createElement('div')),
+    content = null;
+
+  txt.addClass('txtstuff');
+  hiddenDiv.addClass('hiddendiv common');
+
+  $('body').append(hiddenDiv);
+
+  txt.on('keyup', function () {
+    content = $(this).val();
+    content = content.replace(/\n/g, '<br>');
+    hiddenDiv.html(content + ' <br> ');
+    var height = hiddenDiv.height();
+    $('.preview').height(height + 16 + "px");
+    $(this).css('height', hiddenDiv.height());
+  });
+});
+

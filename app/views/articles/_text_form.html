@@ -1,0 +1,15 @@
+<!-- <%= form_for(@article) do |f| %>
+      </ul>
+    </div>
+-->
+<div class="actions">
+<%= f.submit "create", class:"submit upper" %>
+</div>
+<% @bin = @article.bins.build %>
+  <%= form_for(@bin) do |f| %>
+    <!-- <%= f.text_field :type, placeholder: "type", class: "type" %> -->
+    <%= f.text_area :text, placeholder: "Begin your essay", class: "text", id: "comment" %>
+    <%= f.select :type, ['text', 'image', 'sheet', 'video', 'code'], class: "select"%>
+  <% end %>
+<% end %>
+

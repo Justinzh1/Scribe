@@ -1,0 +1,10 @@
+<div class="options">
+    <h1>Create a new bin</h1>
+    <%= form_for @bin, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+      <%= f.text_field :type, placeholder: "type", class: "type" %>
+      <%= f.text_field :text, placeholder: "text", class: "text" %>
+      <%= f.submit "create", class:"submit" %>
+    <% end %>
+</div>
+
+<%= link_to 'back', bins_path %>

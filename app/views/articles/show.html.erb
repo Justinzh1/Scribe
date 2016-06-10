@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+<h1><%= @article.title %><small><%= @article.author %></small></h1>
+<div class="content">
+    <div class="new">
+        <div class="fab">
+            <p>+</p>
+        </div>
+        <div class="options">
+            <i id="img" class="fa fa-file-image-o" aria-hidden="true"></i>
+            <i id="text" class="fa fa-file-text-o" aria-hidden="true"></i>
+            <i id="excel" class="fa fa-file-excel-o" aria-hidden="true"></i>
+            <i id="video" class="fa fa-file-video-o" aria-hidden="true"></i>
+            <i id="code" class="fa fa-file-code-o" aria-hidden="true"></i>
+        </div>
+    </div>
+    <div class="preview">
+        <!-- <h2>Text</h2> -->
+        <%= render :partial => "text_form" %>
+    </div>
+</div>
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>

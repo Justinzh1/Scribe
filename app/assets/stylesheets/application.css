@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+body {
+    font-family: "Roboto Condensed";
+}
+
+input {
+    -webkit-appearance: none;
+    box-shadow: none !important;
+    border: none;
+    outline: none;
+}
+
+input:active {
+    outline: none;
+    -webkit-appearance: none;
+    box-shadow: none !important;
+    border: none;
+}
+
+/*:-webkit-autofill { color: #fff !important; }*/

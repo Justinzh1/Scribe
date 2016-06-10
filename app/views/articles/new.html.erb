@@ -1,0 +1,8 @@
+<div class="popup">
+    <h1>Create a new Article</h1>
+    <%= form_for @article, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+      <%= f.text_field :title, placeholder: "title", class: "title" %>
+      <%= f.text_field :author, placeholder: "author", class: "author" %>
+      <%= f.submit "create", class:"submit" %>
+    <% end %>
+</div>
